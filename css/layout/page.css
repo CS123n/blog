@@ -9,6 +9,16 @@ keep-tablet()
 .page-container .page-main-content {
   padding-top: $header-height;
   position: relative;
+/*背景图片路径*/
+  background: url("https://pic.imgdb.cn/item/62485a3327f86abb2a5b8114.jpg");
+/*背景图片不重复多次显示*/
+  background-repeat: no-repeat;
+/*窗口放缩时背景图片中心始终在屏幕中心*/
+  background-position: center;
+/*背景图片固定，不滚动*/
+  background-attachment: fixed;
+/*图片大小自适应窗口大小*/
+  background-size: cover;
 keep-tablet()
 keep-mobile()
 }
