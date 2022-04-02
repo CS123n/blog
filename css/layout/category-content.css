@@ -1,5 +1,5 @@
 .category-container {
-  background: rgba(255,255,255,0); /*白色半透明*/
+  background: rgba(255,255,255,0.8); /*白色半透明*/
 }
 .category-container .category-name {
   color: var(--second-text-color);

@@ -1,5 +1,5 @@
 .tag-container {
-  background: rgba(255,255,255,0);
+  background: rgba(255,255,255,0.8);
 }
 .tag-container .tag-name {
   color: var(--second-text-color);

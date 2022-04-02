@@ -1964,18 +1964,10 @@ pre .javascript .function {
   float: right;
 }
 .footer {
-  font-size: 1rem;
-  color: var(--third-text-color);
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.7), #fff);
-}
-.footer a {
-  color: var(--third-text-color);
-}
-.footer a:hover {
-  color: var(--primary-color);
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
 }
 .footer .info-container {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -1984,6 +1976,47 @@ pre .javascript .function {
 }
 .footer .icon-animate {
   animation: icon-animate 1.2s ease-in-out infinite;
+}
+.footer .github-badge {
+  display: inline-block;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #abbac3;
+  color: #fff;
+  text-shadow: none;
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer .github-badge a span {
+  color: #fff;
+}
+.footer .github-badge .badge-subject {
+  display: inline-block;
+  padding: 4px 4px 4px 6px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: #4d4d4d;
+}
+.footer .github-badge .bg-blue {
+  background-color: #007ec6 !important;
+}
+.footer .github-badge .badge-value {
+  display: inline-block;
+  padding: 4px 6px 4px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.footer .github-badge .bg-brightgreen {
+  background-color: #4dc820 !important;
+}
+.footer .github-badge .bg-orange {
+  background-color: #ffa500 !important;
+}
+.footer .github-badge .bg-blueviolet {
+  background-color: #8833d7 !important;
+}
+.footer .github-badge .bg-red {
+  background-color: #e05d44 !important;
 }
 .paginator {
   font-size: 1rem;
@@ -2676,7 +2709,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
-  background: rgba(255,255,255,0); /*白色半透明*/
+  background: rgba(255,255,255,0.8); /*白色半透明*/
 }
 @media (max-width: 780px) {
   .category-container {
@@ -2731,7 +2764,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
-  background: rgba(255,255,255,0);
+  background: rgba(255,255,255,0.8);
 }
 @media (max-width: 780px) {
   .tag-container {
