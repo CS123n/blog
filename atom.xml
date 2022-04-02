@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://blog.liulp.club/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://blog.liulp.club/"/>
   <updated>2022-04-02T08:20:27.329Z</updated>
-  <id>http://example.com/</id>
+  <id>https://blog.liulp.club/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Homeassistant</title>
-    <link href="http://example.com/2022/04/homeassistant/"/>
-    <id>http://example.com/2022/04/homeassistant/</id>
+    <link href="https://blog.liulp.club/2022/04/homeassistant/"/>
+    <id>https://blog.liulp.club/2022/04/homeassistant/</id>
     <published>2022-04-02T08:20:27.329Z</published>
     <updated>2022-04-02T08:20:27.329Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="极客" scheme="http://example.com/categories/%E6%9E%81%E5%AE%A2/"/>
+    <category term="极客" scheme="https://blog.liulp.club/categories/%E6%9E%81%E5%AE%A2/"/>
     
     
-    <category term="homeassistant" scheme="http://example.com/tags/homeassistant/"/>
+    <category term="homeassistant" scheme="https://blog.liulp.club/tags/homeassistant/"/>
     
-    <category term="智能家居" scheme="http://example.com/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/"/>
+    <category term="智能家居" scheme="https://blog.liulp.club/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/"/>
     
   </entry>
   
   <entry>
     <title>Docker配置</title>
-    <link href="http://example.com/2022/04/docker/"/>
-    <id>http://example.com/2022/04/docker/</id>
+    <link href="https://blog.liulp.club/2022/04/docker/"/>
+    <id>https://blog.liulp.club/2022/04/docker/</id>
     <published>2022-04-02T08:08:57.770Z</published>
     <updated>2022-04-02T08:08:57.770Z</updated>
     
@@ -61,14 +61,14 @@
     
     
     
-    <category term="极客" scheme="http://example.com/categories/%E6%9E%81%E5%AE%A2/"/>
+    <category term="极客" scheme="https://blog.liulp.club/categories/%E6%9E%81%E5%AE%A2/"/>
     
     
-    <category term="Openwrt" scheme="http://example.com/tags/Openwrt/"/>
+    <category term="Openwrt" scheme="https://blog.liulp.club/tags/Openwrt/"/>
     
-    <category term="docker" scheme="http://example.com/tags/docker/"/>
+    <category term="docker" scheme="https://blog.liulp.club/tags/docker/"/>
     
-    <category term="homeassistant" scheme="http://example.com/tags/homeassistant/"/>
+    <category term="homeassistant" scheme="https://blog.liulp.club/tags/homeassistant/"/>
     
   </entry>
   
