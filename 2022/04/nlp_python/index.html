@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="刘悠悠">
+    
+    <title>
+        
+            自然语言处理 |
+        
+        悠悠笔记
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.liulp.club","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg","favicon":"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                悠悠笔记
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">自然语言处理</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">刘悠悠</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-02 17:53:51</span>
+        <span class="mobile">2022-04-02 17:53</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/NLP/">NLP</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
+        </span>
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul>
+<li><p>特高频特低频词都不能用于分析语言风格</p>
+</li>
+<li><p>高频长词，连词搭配可以分析风格</p>
+</li>
+<li><p>语言理解技术：词义消歧，指代消歧</p>
+</li>
+<li><p>语言理解应用：机器翻译（MT），含义识别（RTE）</p>
+</li>
+<li><p>nltk.Text():</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Text(words)</td>
+<td align="center">对象构造</td>
+</tr>
+<tr>
+<td align="center">concordance(word, width=79, lines=25)</td>
+<td align="center">显示word出现的上下文</td>
+</tr>
+<tr>
+<td align="center">common_contexts(words)</td>
+<td align="center">显示words出现的相同模式</td>
+</tr>
+<tr>
+<td align="center">similar(word)</td>
+<td align="center">显示word的相似词</td>
+</tr>
+<tr>
+<td align="center">collocations(num=20, window_size=2)</td>
+<td align="center">显示最常见的二词搭配</td>
+</tr>
+<tr>
+<td align="center">count(word)</td>
+<td align="center">word出现的词数</td>
+</tr>
+<tr>
+<td align="center">dispersion_plot(words)</td>
+<td align="center">绘制words中文档中出现的位置图</td>
+</tr>
+<tr>
+<td align="center">vocab()</td>
+<td align="center">返回文章去重的词典</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>GB2312，Latin-2，UTF-8是对应Unicode的一部分</p>
+</li>
+<li><p>正则匹配：<br>^ 匹配开始，$ 匹配结尾，? 前方可选，. 匹配任意1个，+ 前方一个或多个，* 前方零个或多个，{m,n} 至少重复m次不多于n次  </p>
+<table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[abc]</td>
+<td align="center">匹配字符集合</td>
+</tr>
+<tr>
+<td align="center">ed|ing</td>
+<td align="center">匹配指定的字符串（析取）</td>
+</tr>
+<tr>
+<td align="center">a(b|c)+</td>
+<td align="center">括号表示操作符的范围</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>辅音元音序列，从中可以看出s和t后元音的分布几乎是互补的：  </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">a</th>
+<th align="center">e</th>
+<th align="center">i</th>
+<th align="center">o</th>
+<th align="center">u</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">s</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">t</td>
+<td align="center">47</td>
+<td align="center">8</td>
+<td align="center">0</td>
+<td align="center">148</td>
+<td align="center">37</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>词干提取：lying -&gt; lie （会产生非词）；词形归并：women -&gt; woman；非标准词：数字、缩写、日期</p>
+</li>
+<li><p>正则简写：[a-zA-Z0-9_] = \w、[ \t\n] = \s</p>
+</li>
+</ul>
+<h2 id="词性标注"><a href="#词性标注" class="headerlink" title="词性标注"></a>词性标注</h2><ul>
+<li>词性标记集：adj，adv，cnj连词，det限定词 ……</li>
+<li>使用out of vocabulary (UNK)替换超出词汇</li>
+<li>简单词性标注：默认标注 &lt;- 正则标注 &lt;- 查询标注</li>
+<li>一个语料库出现的新词大多数是名词，且一个语料库中最多的往往也是名词，所以一般将名词作为默认值</li>
+<li>频率标注：1-gram unigram、2-gram bigram、3-gram trigram，n-gram标注器中n大于3时，面临数据稀疏问题</li>
+<li>为了防止多词查询跨句，在句子开始处加None</li>
+<li>标注策略失败要回退上级策略，直至默认标注</li>
+<li>给定当前单词及其前两个标记，在约5%的情况中，有一个以上的标记分配给当前词</li>
+<li>修正标注（Brill）：基于规则不断修正</li>
+<li>语言学家使用形态学、句法和语义线索确定一个词的类别</li>
+</ul>
+<h2 id="文本分类"><a href="#文本分类" class="headerlink" title="文本分类"></a>文本分类</h2><ul>
+<li>训练数据分为：train、dev-test、test三部分</li>
+<li>最大熵马尔可夫模型和线性链条件随机场模型</li>
+<li>任务：姓名性别识别，对话行为分类，句子分割，文本蕴含判断</li>
+<li>精确度= true &amp; positive / positive，召回率 = true &amp; positive / true</li>
+<li>交叉验证：将原始语料分为N个子集（folds）。对于每一个折叠，我们使用除这个折叠中的数据外所有数据来训练模型，然后在这个折叠上测试模型</li>
+<li>决策树：<ul>
+<li>信息增益：得到某个信息后熵的减少</li>
+<li>底层节点样本太少：设置停止阈值 or 对低性能节点进行裁剪</li>
+<li>特征按照顺序处理，难以处理相互独立多特征的情况</li>
+</ul>
+</li>
+<li>朴素贝叶斯：<ul>
+<li>假设：特征相互独立</li>
+<li>零计数和平滑：对于未出现、低频率的分类进行平滑，提升重要性</li>
+</ul>
+</li>
+<li>最大熵分类：<ul>
+<li>假设：满足所有约束条件，分布越平均熵越大越好</li>
+</ul>
+</li>
+</ul>
+<h2 id="信息提取"><a href="#信息提取" class="headerlink" title="信息提取"></a>信息提取</h2><ul>
+<li>名词短语分块（NP-chunking）：<ul>
+<li>可选的跟着任意数目形容词（JJ）的限定词（DT）和名词（NN）组成</li>
+<li>IOB标记：I（inside），O（outside）或Ｂ（begin）</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/62481d1127f86abb2ad06a26.png"
+                     
+                ></p>
+<ul>
+<li>VP分块，如has already delivered；PP分块，如because of</li>
+<li>命名实体识别：组织，人，地点，日期，货币，设施，地缘政治实体</li>
+<li>有了明确的命名实体就可以进行关系抽取</li>
+</ul>
+<h2 id="句子结构"><a href="#句子结构" class="headerlink" title="句子结构"></a>句子结构</h2><ul>
+<li>歧义句子：While hunting in Africa, <strong>I shot an elephant in my pajamas.</strong> How an elephant got into my pajamas I’ll never know.</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/62481d1c27f86abb2ad07e87.png"
+                     
+                ></p>
+<ul>
+<li>and不能连接NP和AP，e.g., It is the worst part and clumsy looking.</li>
+<li>解析器：下降递归分析、移进-归约分析、左角落分析（带自下而上过滤的自上而下的方法）、图表分析（动态规划）</li>
+<li>左角落分析：</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/62481d2827f86abb2ad092ad.png"
+                     
+                ></p>
+<ul>
+<li>图表分析（动态规划）：    <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; tokens = <span class="string">&quot;I shot an elephant in my pajamas&quot;</span>.split()</span><br><span class="line">&gt;&gt; wfst0 = init_wfst(tokens, groucho_grammar)</span><br><span class="line">&gt;&gt; wfst1 = complete_wfst(wfst0, tokens, groucho_grammar)</span><br><span class="line">&gt;&gt; display(wfst1, tokens)</span><br><span class="line">WFST  <span class="number">1</span>   <span class="number">2</span>     <span class="number">3</span>　   <span class="number">4</span>　   <span class="number">5</span>　   <span class="number">6</span>　   <span class="number">7</span></span><br><span class="line"><span class="number">0</span>　  NP   .　   .　   S　   .　   .　   S</span><br><span class="line"><span class="number">1</span>　   .   V　   .　  VP　   .　   .　  VP</span><br><span class="line"><span class="number">2</span>　   .   .   Det　  NP　   .　   .　   .</span><br><span class="line"><span class="number">3</span>　   .   .　   .　   N　   .　   .　   .</span><br><span class="line"><span class="number">4</span>　   .   .　   .　   .　   P　   .　  PP</span><br><span class="line"><span class="number">5</span>　   .   .　   .　   .　   .　 Det　  NP</span><br><span class="line"><span class="number">6</span>　   .   .　   .　   .　   .　   .　   N</span><br></pre></td></tr></table></figure></li>
+<li>依存关系的表示：(shot I (elephant an (in (pajamas my))))、(shot I (elephant an) (in (pajamas my)))  </li>
+<li>动词及物or不及物称为动词的配价  </li>
+<li>随着句子的增长，歧义是爆炸式增长的。因此需要加权文法，即为每一个分叉分配概率，且加和为1  </li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">#机器学习</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/NLP/">#NLP</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/docker/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Docker配置</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">刘悠悠</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%8D%E6%80%A7%E6%A0%87%E6%B3%A8"><span class="nav-number">2.</span> <span class="nav-text">词性标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">文本分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96"><span class="nav-number">4.</span> <span class="nav-text">信息提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A5%E5%AD%90%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">句子结构</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
