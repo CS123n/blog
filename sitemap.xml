@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.liulp.club/2021/12/nlp_python/</loc>
+    
+    <lastmod>2022-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.liulp.club/2021/08/openwrt_init/</loc>
     
     <lastmod>2022-04-02</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://blog.liulp.club/2021/08/homeassistant/</loc>
-    
-    <lastmod>2022-04-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liulp.club/2021/12/nlp_python/</loc>
     
     <lastmod>2022-04-02</lastmod>
     
@@ -102,13 +102,6 @@
   </url>
   
   <url>
-    <loc>https://blog.liulp.club/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.liulp.club/tags/NLP/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -132,21 +125,21 @@
   </url>
   
   <url>
-    <loc>https://blog.liulp.club/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liulp.club/categories/%E5%AD%A6%E4%B9%A0/NLP/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.liulp.club/categories/%E6%9E%81%E5%AE%A2/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liulp.club/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liulp.club/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
