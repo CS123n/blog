@@ -1133,6 +1133,16 @@ pre .javascript .function {
 .page-container .page-main-content {
   padding-top: 70px;
   position: relative;
+/*背景图片路径*/
+  background: url("https://pic.imgdb.cn/item/62485a3327f86abb2a5b8114.jpg");
+/*背景图片不重复多次显示*/
+  background-repeat: no-repeat;
+/*窗口放缩时背景图片中心始终在屏幕中心*/
+  background-position: center;
+/*背景图片固定，不滚动*/
+  background-attachment: fixed;
+/*图片大小自适应窗口大小*/
+  background-size: cover;
 }
 .header-shrink .page-container .page-main-content {
   padding-top: 50.4px;
@@ -1537,7 +1547,7 @@ pre .javascript .function {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--background-color);
+  background: linear-gradient(to bottom, #fff, rgba(255,255,255,0.4));
   padding-top: 2px;
   box-shadow: 2px 2px 5px var(--shadow-color);
 }
@@ -1956,6 +1966,7 @@ pre .javascript .function {
 .footer {
   font-size: 1rem;
   color: var(--third-text-color);
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.7), #fff);
 }
 .footer a {
   color: var(--third-text-color);
@@ -1964,6 +1975,7 @@ pre .javascript .function {
   color: var(--primary-color);
 }
 .footer .info-container {
+  padding-top: 40px;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -1990,6 +2002,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0.8);
 }
 @media (max-width: 780px) {
   .page-template-container {
@@ -2126,6 +2139,7 @@ pre .javascript .function {
   box-sizing: border-box;
   background: var(--background-color);
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0.8); /*白色半透明*/
 }
 .category-list-container:hover {
   box-shadow: 2px 2px 8px var(--shadow-hover-color);
@@ -2256,7 +2270,7 @@ pre .javascript .function {
   margin-bottom: 0;
 }
 .home-content-container {
-  background: var(--background-color);
+  background: rgba(255,255,255,0);
 }
 .home-content-container .home-article-list .home-article-item {
   position: relative;
@@ -2270,6 +2284,7 @@ pre .javascript .function {
   transition-delay: 0s, 0s, 0s, 0s, 0s;
   transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
   transition-timing-function: ease, ease, ease, ease, linear;
+  background: rgba(255,255,255,0.8); /*白色半透明*/
 }
 @media (max-width: 780px) {
   .home-content-container .home-article-list .home-article-item {
@@ -2416,6 +2431,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0.9); /*白色半透明*/
 }
 @media (max-width: 780px) {
   .article-content-container {
@@ -2660,6 +2676,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0); /*白色半透明*/
 }
 @media (max-width: 780px) {
   .category-container {
@@ -2714,6 +2731,7 @@ pre .javascript .function {
   background: var(--background-color);
   margin-bottom: 30px;
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0);
 }
 @media (max-width: 780px) {
   .tag-container {
@@ -2767,6 +2785,7 @@ pre .javascript .function {
   box-sizing: border-box;
   background: var(--background-color);
   box-shadow: 2px 2px 5px var(--shadow-color);
+  background: rgba(255,255,255,0.8); /*白色半透明*/
 }
 .tagcloud-container:hover {
   box-shadow: 2px 2px 8px var(--shadow-hover-color);
