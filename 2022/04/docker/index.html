@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="刘悠悠">
+    
+    <title>
+        
+            Docker配置 |
+        
+        悠悠笔记
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://imgtp.apqiang.com/2022/04/02/vAM7tmWY.jpg","favicon":"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                悠悠笔记
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Docker配置</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://imgtp.apqiang.com/2022/04/02/vAM7tmWY.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">刘悠悠</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-02 16:08:57</span>
+        <span class="mobile">2022-04-02 16:08</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%9E%81%E5%AE%A2/">极客</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Openwrt/">Openwrt</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/docker/">docker</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/homeassistant/">homeassistant</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1k 字</span>
+        </span>
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>Openwrt中有使用docker的需求，顺道学习一下docker的配置。</p>
+<h2 id="空间挂载"><a href="#空间挂载" class="headerlink" title="空间挂载"></a>空间挂载</h2><p>openwrt默认是/opt和/overlay共用空间，因为文件格式等问题，docker在这种情况下只能使用vfs储存模式，占用空间大且速度慢。为此，在openwrt中分别为overlay和docker的opt分别分配空间并格式化为ext4格式，然后把/overlay和/opt分别挂载在上面，这样docker就会自动使用更好更快的overlay2储存模式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://imgtp.apqiang.com/2022/04/02/0SKacLEp.jpg"
+                     
+                ></p>
+<p>另外，我还将一块移动硬盘挂载在/mnt/share，而且将它通过<code>Samba</code>进行网络共享，共享下局域网传文件速度还是很可观的。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://imgtp.apqiang.com/2022/04/02/FdReEWur.jpg"
+                     
+                ></p>
+<h2 id="Homeassistant"><a href="#Homeassistant" class="headerlink" title="Homeassistant"></a>Homeassistant</h2><p>首先是使用docker在openwrt中安装<code>Homeassistant</code>，这样就可以本地搭建智能家居服务器。<code>Homeassistant</code>使用<code>MQTT</code>协议的通信服务，所以还搭建了一个基于<code>MQTT</code>的开源服务器<code>Eclipse Mosquitto</code>的docker。</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.home-assistant.io/" >Homeassistant<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MQTT" >MQTT<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://mosquitto.org/" >Eclipse Mosquitto<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h3 id="MQTT"><a href="#MQTT" class="headerlink" title="MQTT"></a>MQTT</h3><p>首先设置配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/config</span><br><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/data</span><br><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/log</span><br><span class="line">nano /mosquitto/config/mosquitto.conf</span><br></pre></td></tr></table></figure>
+<p>并在mosquitto.conf中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">persistence true</span><br><span class="line">persistence_location /mosquitto/data</span><br><span class="line">log_dest file /mosquitto/log/mosquitto.log</span><br></pre></td></tr></table></figure>
+<p>如果需要使用密码，因为我只在局域网提供服务，就没有添加用户名密码。在mosquitto.conf中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">allow_anonymous false</span><br><span class="line">password_file /mosquitto/pwfile</span><br></pre></td></tr></table></figure>
+<p>然后在容器启动后运行命令，添加用户admin以及密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mosquitto_passwd -c /mosquitto/pwfile admin</span><br></pre></td></tr></table></figure>
+<p>并授予目录权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R 755 /mosquitto</span><br><span class="line">chmode -R 777 /mosquitto/log</span><br></pre></td></tr></table></figure>
+<p>完成以上准备后，启动容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=<span class="string">&quot;mosquitto&quot;</span> --net=host \</span><br><span class="line">    -v /mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf \</span><br><span class="line">    -v /mosquitto/data:/mosquitto/data \</span><br><span class="line">    -v /mosquitto/log:/mosquitto/log \</span><br><span class="line">    eclipse-mosquitto:1.6.14</span><br></pre></td></tr></table></figure>
+<p>要注意的是，一是最新版本的Eclipse Mosquitto 2无法被正常访问，所以建议使用1.6.14版本。二是在openwrt中的桥接模式，端口映射后被其他终端直接访问有问题，建议直接使用host模式，共享网络。</p>
+<h3 id="Homeassistant-1"><a href="#Homeassistant-1" class="headerlink" title="Homeassistant"></a>Homeassistant</h3><p>接下来运行Homeassistant</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=<span class="string">&quot;home-assistants&quot;</span> -p 8123:8123 \</span><br><span class="line">    -v /root/homeassistant/config:/config \</span><br><span class="line">    -v /mnt/share:/mnt/share \</span><br><span class="line">    homeassistant/home-assistant</span><br></pre></td></tr></table></figure>
+<p>除了将配置文件进行映射，我还将我的分享目录进行了映射，这样就可以通过<code>Homeassistant</code>直接访问分享目录下的影视资源。</p>
+<h2 id="Nginx-PHP"><a href="#Nginx-PHP" class="headerlink" title="Nginx+PHP"></a>Nginx+PHP</h2><p>为了为局域网添加Speedtest。刚开始打算直接添加Speedtest的docker，可惜出现了架构不兼容的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARNING: The requested image&#x27;s platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested</span><br></pre></td></tr></table></figure>
+<p>为此，我决定曲线救国，使用docker搭建web服务器。开始打算使用集成好的docker镜像，最后还是决定使用docker-compose的方案。分别安装nginx和php的官方docker镜像，这两个镜像都没有架构兼容性问题。</p>
+<p>首先安装php</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=<span class="string">&quot;web-php&quot;</span> -p 9000:9000 \</span><br><span class="line">    -v /root/nginx/webroot:/usr/share/nginx/html \</span><br><span class="line">    php:7.2-fpm</span><br></pre></td></tr></table></figure>
+
+<p>其次添加nginx的配置文件conf.d</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line">    server_name localhost;</span><br><span class="line"></span><br><span class="line">    index index.php index.html;</span><br><span class="line">    error_log  /var/log/nginx/error.log;</span><br><span class="line">    access_log /var/log/nginx/access.log;</span><br><span class="line">    root /var/www/html;</span><br><span class="line"></span><br><span class="line">    set $virtualdir &quot;&quot;;</span><br><span class="line">    set $realdir &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    if ($request_uri ~ ^/([^/]*)/.*$ ) &#123;</span><br><span class="line">        set $virtualdir /$1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (-d &quot;$document_root$virtualdir&quot;) &#123;</span><br><span class="line">        set $realdir &quot;$&#123;virtualdir&#125;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files $uri $uri/ $realdir/index.php?$args;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files $uri =404;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass 192.168.2.110:9000;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">        fastcgi_param PATH_INFO $fastcgi_path_info;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，文件路径为/root/nginx/webroot。并且将</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastcgi_pass 192.168.2.110:9000;</span><br></pre></td></tr></table></figure>
+<p>中的地址修改为php的运行位置。建议不要用桥接的地址，因为我发现每次重启后，桥接地址是可能发生变换的，建议端口映射后，直接使用局域网地址。</p>
+<p>然后运行nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=<span class="string">&quot;web-nginx&quot;</span> -p 8088:80 \</span><br><span class="line">    -v /root/nginx/conf.d:/etc/nginx/conf.d</span><br><span class="line">    -v /root/nginx/webroot:/usr/share/nginx/html</span><br><span class="line">    nginx:latest</span><br></pre></td></tr></table></figure>
+<p>有个问题是，8080端口不能正常使用，建议使用自定义端口，譬如我用的8088端口。</p>
+<h3 id="Speedtest"><a href="#Speedtest" class="headerlink" title="Speedtest"></a>Speedtest</h3><p>成功运行后，在文件目录，我的是/root/nginx/webroot，添加Speedtest的网站文件。并将example-singleServer-full.html重命名为默认文件index.html。然后就可以直接访问对应的网址测速了，我的是<a class="link"   target="_blank" rel="noopener" href="http://192.168.2.110:8088/speedtest/" >192.168.2.110:8088/speedtest/<i class="fas fa-external-link-alt"></i></a>。</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/librespeed/speedtest" >Speedtest<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<p>当当当当，最终的测速效果如下</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://imgtp.apqiang.com/2022/04/02/pG6amdl2.jpg"
+                     
+                ></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/Openwrt/">#Openwrt</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/docker/">#docker</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/homeassistant/">#homeassistant</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/homeassistant/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Homeassistant</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">刘悠悠</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%8C%82%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">空间挂载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homeassistant"><span class="nav-number">2.</span> <span class="nav-text">Homeassistant</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MQTT"><span class="nav-number">2.1.</span> <span class="nav-text">MQTT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Homeassistant-1"><span class="nav-number">2.2.</span> <span class="nav-text">Homeassistant</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-PHP"><span class="nav-number">3.</span> <span class="nav-text">Nginx+PHP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Speedtest"><span class="nav-number">3.1.</span> <span class="nav-text">Speedtest</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
