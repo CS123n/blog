@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.liulp.club/2022/04/convex_optim1/</loc>
+    
+    <lastmod>2022-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.liulp.club/2021/12/nlp_python/</loc>
     
     <lastmod>2022-04-02</lastmod>
@@ -115,6 +124,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.liulp.club/tags/%E5%87%B8%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -140,6 +156,20 @@
   
   <url>
     <loc>https://blog.liulp.club/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liulp.club/categories/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liulp.club/categories/%E6%95%B0%E5%AD%A6/%E5%87%B8%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
