@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
@@ -16,9 +17,10 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/CS123n/blog@master/css/font-awesome.min.css">
-    <script id="hexo-configurations">let KEEP=window.KEEP||{};KEEP.hexo_config={hostname:"blog.liulp.club",root:"/",language:"zh-CN",path:"search.json"},KEEP.theme_config={toc:{enable:!0,number:!0,expand_all:!1,init_open:!1},style:{primary_color:"#0066CC",avatar:"https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg",favicon:"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico",article_img_align:"center",left_side_width:"260px",content_max_width:"920px",hover:{shadow:!0,scale:!1},first_screen:{enable:!1,background_img:"/images/bg.svg",description:"Keep writing and Keep loving."},scroll:{progress_bar:{enable:!1},percent:{enable:!0}}},local_search:{enable:!0,preload:!1},code_copy:{enable:!0,style:"default"},pjax:{enable:!1},lazyload:{enable:!0},version:"3.4.5"},KEEP.language_ago={second:"%s 秒前",minute:"%s 分钟前",hour:"%s 小时前",day:"%s 天前",week:"%s 周前",month:"%s 个月前",year:"%s 年前"}</script>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031015174.ico">
+    
+    <link rel="stylesheet" href="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/5.15.1/css/all.min.css">
+    <script id="hexo-configurations">let KEEP=window.KEEP||{};KEEP.hexo_config={hostname:"blog.liulp.club",root:"/",language:"zh-CN",path:"search.json"},KEEP.theme_config={toc:{enable:!0,number:!0,expand_all:!1,init_open:!1},style:{primary_color:"#0066CC",avatar:"https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031016579.webp",favicon:"https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031015174.ico",article_img_align:"center",left_side_width:"260px",content_max_width:"920px",hover:{shadow:!0,scale:!1},first_screen:{enable:!1,background_img:"/images/bg.svg",description:"Keep writing and Keep loving."},scroll:{progress_bar:{enable:!1},percent:{enable:!0}}},local_search:{enable:!0,preload:!1},code_copy:{enable:!0,style:"default"},pjax:{enable:!1},lazyload:{enable:!0},version:"3.4.5"},KEEP.language_ago={second:"%s 秒前",minute:"%s 分钟前",hour:"%s 小时前",day:"%s 天前",week:"%s 周前",month:"%s 个月前",year:"%s 年前"}</script>
 <meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
@@ -138,7 +140,7 @@
         
             <div class="article-header">
                 <div class="avatar">
-                    <img src="https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg">
+                    <img src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031016579.webp">
                 </div>
                 <div class="info">
                     <div class="author">
@@ -214,12 +216,12 @@
 <h3 id="网络拓扑"><a href="#网络拓扑" class="headerlink" title="网络拓扑"></a>网络拓扑</h3><p>刷机成功后，连上树莓派的默认Wifi。首先要将旁路由的ip地址改到主路由网段：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uci <span class="built_in">set</span> network.lan.ipaddr=192.168.2.110</span><br><span class="line">uci commit network</span><br><span class="line">/etc/init.d/network restart</span><br></pre></td></tr></table></figure>
 <p>然后就可以将树莓派插到主路由的LAN口上了，并通过刚刚设置的ip，对于我就是192.168.2.110，直接访问了。整个网络拓扑如下</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/624832a327f86abb2afca507.jpg"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031022860.webp"></p>
 <h3 id="DNS服务配置"><a href="#DNS服务配置" class="headerlink" title="DNS服务配置"></a>DNS服务配置</h3><p>由于我主路由本来运行着<code>SmartDNS</code>，我关闭了主路由的DNS服务，从主路由将DNS服务器直接设置为树莓派的ip。</p>
 <ul>
 <li><a class="link" target="_blank" rel="noopener" href="https://github.com/pymumu/smartdns">SmartDNS<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/624832bc27f86abb2afce0fa.jpg"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031022862.webp"></p>
 <p>这里遇到的一个坑是，本来计划直接让Adguard Home接管53端口，但是出现了梯子用不了等网络的问题。最后还是选用将Adguard Home作为dnsmasq的上游服务器，可能这样其他服务也可以正常设置DNS服务，如修改dnsmasq配置。</p>
 <p>因为我家光猫不支持ipv6，所以我在旁路由DHCP/DNS和Adguard Home中分别禁止了ipv6解析，以便快速返回解析结果。</p>
 <h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>Adguard Home不仅仅可以用于拦截广告。可以通过Adguard Home自定义拦截规则，来设置自定义域名，譬如设置<a class="link" target="_blank" rel="noopener" href="http://mywifi.org/">mywifi.org<i class="fas fa-external-link-alt"></i></a>指向192.168.2.110，条目如下：</p>
@@ -369,12 +371,6 @@
 
         
         
-            <li class="tools-item rss flex-center">
-                <a class="flex-center" href="/atom.xml" target="_blank">
-                    <i class="fas fa-rss"></i>
-                </a>
-            </li>
-        
 
         
 
@@ -441,23 +437,47 @@
 
 
 
-<script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/main.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/back2top.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/dark-light-toggle.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/footer.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+<script src="/js/style.js"></script>
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/local-search.js"></script>
+
+    
+<script src="/js/local-search.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/code-copy.js"></script>
+
+    
+<script src="/js/code-copy.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/lazyload.js"></script>
+
+    
+<script src="/js/lazyload.js"></script>
+
 
 
 <div class="post-scripts">
     
-        <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/toc.js"></script>
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

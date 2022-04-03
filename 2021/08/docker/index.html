@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
@@ -16,9 +17,10 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/CS123n/blog@master/css/font-awesome.min.css">
-    <script id="hexo-configurations">let KEEP=window.KEEP||{};KEEP.hexo_config={hostname:"blog.liulp.club",root:"/",language:"zh-CN",path:"search.json"},KEEP.theme_config={toc:{enable:!0,number:!0,expand_all:!1,init_open:!1},style:{primary_color:"#0066CC",avatar:"https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg",favicon:"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico",article_img_align:"center",left_side_width:"260px",content_max_width:"920px",hover:{shadow:!0,scale:!1},first_screen:{enable:!1,background_img:"/images/bg.svg",description:"Keep writing and Keep loving."},scroll:{progress_bar:{enable:!1},percent:{enable:!0}}},local_search:{enable:!0,preload:!1},code_copy:{enable:!0,style:"default"},pjax:{enable:!1},lazyload:{enable:!0},version:"3.4.5"},KEEP.language_ago={second:"%s 秒前",minute:"%s 分钟前",hour:"%s 小时前",day:"%s 天前",week:"%s 周前",month:"%s 个月前",year:"%s 年前"}</script>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031015174.ico">
+    
+    <link rel="stylesheet" href="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/5.15.1/css/all.min.css">
+    <script id="hexo-configurations">let KEEP=window.KEEP||{};KEEP.hexo_config={hostname:"blog.liulp.club",root:"/",language:"zh-CN",path:"search.json"},KEEP.theme_config={toc:{enable:!0,number:!0,expand_all:!1,init_open:!1},style:{primary_color:"#0066CC",avatar:"https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031016579.webp",favicon:"https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031015174.ico",article_img_align:"center",left_side_width:"260px",content_max_width:"920px",hover:{shadow:!0,scale:!1},first_screen:{enable:!1,background_img:"/images/bg.svg",description:"Keep writing and Keep loving."},scroll:{progress_bar:{enable:!1},percent:{enable:!0}}},local_search:{enable:!0,preload:!1},code_copy:{enable:!0,style:"default"},pjax:{enable:!1},lazyload:{enable:!0},version:"3.4.5"},KEEP.language_ago={second:"%s 秒前",minute:"%s 分钟前",hour:"%s 小时前",day:"%s 天前",week:"%s 周前",month:"%s 个月前",year:"%s 年前"}</script>
 <meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
@@ -138,7 +140,7 @@
         
             <div class="article-header">
                 <div class="avatar">
-                    <img src="https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg">
+                    <img src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031016579.webp">
                 </div>
                 <div class="info">
                     <div class="author">
@@ -207,9 +209,9 @@
         <div class="article-content markdown-body">
             <p>Openwrt中有使用docker的需求，顺道学习一下docker的配置。</p>
 <h2 id="空间挂载"><a href="#空间挂载" class="headerlink" title="空间挂载"></a>空间挂载</h2><p>openwrt默认是/opt和/overlay共用空间，因为文件格式等问题，docker在这种情况下只能使用vfs储存模式，占用空间大且速度慢。为此，在openwrt中分别为overlay和docker的opt分别分配空间并格式化为ext4格式，然后把/overlay和/opt分别挂载在上面，这样docker就会自动使用更好更快的overlay2储存模式。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481d8e27f86abb2ad15124.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031018695.webp"></p>
 <p>另外，我还将一块移动硬盘挂载在/mnt/share，而且将它通过<code>Samba</code>进行网络共享，共享下局域网传文件速度还是很可观的。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481da727f86abb2ad18298.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031018693.webp"></p>
 <h2 id="Homeassistant"><a href="#Homeassistant" class="headerlink" title="Homeassistant"></a>Homeassistant</h2><p>首先是使用docker在openwrt中安装<code>Homeassistant</code>，这样就可以本地搭建智能家居服务器。<code>Homeassistant</code>使用<code>MQTT</code>协议的通信服务，所以还搭建了一个基于<code>MQTT</code>的开源服务器<code>Eclipse Mosquitto</code>的docker。</p>
 <ul>
 <li><a class="link" target="_blank" rel="noopener" href="https://www.home-assistant.io/">Homeassistant<i class="fas fa-external-link-alt"></i></a></li>
@@ -251,7 +253,7 @@
 <li><a class="link" target="_blank" rel="noopener" href="https://github.com/librespeed/speedtest">Speedtest<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
 <p>当当当当，最终的测速效果如下</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481dc027f86abb2ad1b2ef.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/CS123n/source@master/blog/202204031018692.webp"></p>
 
         </div>
 
@@ -403,12 +405,6 @@
 
         
         
-            <li class="tools-item rss flex-center">
-                <a class="flex-center" href="/atom.xml" target="_blank">
-                    <i class="fas fa-rss"></i>
-                </a>
-            </li>
-        
 
         
 
@@ -475,23 +471,47 @@
 
 
 
-<script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/main.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/back2top.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/dark-light-toggle.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/footer.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+<script src="/js/style.js"></script>
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/local-search.js"></script>
+
+    
+<script src="/js/local-search.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/code-copy.js"></script>
+
+    
+<script src="/js/code-copy.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/lazyload.js"></script>
+
+    
+<script src="/js/lazyload.js"></script>
+
 
 
 <div class="post-scripts">
     
-        <script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/gh/CS123n/blog@master/js/toc.js"></script>
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
