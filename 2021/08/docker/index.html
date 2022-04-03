@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
     <meta name="author" content="刘悠悠">
@@ -18,12 +18,7 @@
 
     <link rel="shortcut icon" href="https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/CS123n/blog@master/css/font-awesome.min.css">
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"blog.liulp.club","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg","favicon":"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
-  </script>
+    <script id="hexo-configurations">let KEEP=window.KEEP||{};KEEP.hexo_config={hostname:"blog.liulp.club",root:"/",language:"zh-CN",path:"search.json"},KEEP.theme_config={toc:{enable:!0,number:!0,expand_all:!1,init_open:!1},style:{primary_color:"#0066CC",avatar:"https://pic.imgdb.cn/item/62481ccb27f86abb2acfe3fa.jpg",favicon:"https://imgtp.apqiang.com/2022/04/02/dTmR3ldX.ico",article_img_align:"center",left_side_width:"260px",content_max_width:"920px",hover:{shadow:!0,scale:!1},first_screen:{enable:!1,background_img:"/images/bg.svg",description:"Keep writing and Keep loving."},scroll:{progress_bar:{enable:!1},percent:{enable:!0}}},local_search:{enable:!0,preload:!1},code_copy:{enable:!0,style:"default"},pjax:{enable:!1},lazyload:{enable:!0},version:"3.4.5"},KEEP.language_ago={second:"%s 秒前",minute:"%s 分钟前",hour:"%s 小时前",day:"%s 天前",week:"%s 周前",month:"%s 个月前",year:"%s 年前"}</script>
 <meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
@@ -58,33 +53,25 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
+                            <a class="" href="/">
                                 首页
                             </a>
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
-                               href="/categories"
-                            >
+                            <a class="" href="/categories">
                                 分类
                             </a>
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
+                            <a class="" href="/tags">
                                 标签
                             </a>
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
+                            <a class="" href="/about">
                                 关于
                             </a>
                         </li>
@@ -111,23 +98,19 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">首页</a>
+                    <a class="" href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/categories">分类</a>
+                    <a class="" href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
+                    <a class="" href="/tags">标签</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
+                    <a class="" href="/about">关于</a>
                 </li>
             
         </ul>
@@ -224,24 +207,14 @@
         <div class="article-content markdown-body">
             <p>Openwrt中有使用docker的需求，顺道学习一下docker的配置。</p>
 <h2 id="空间挂载"><a href="#空间挂载" class="headerlink" title="空间挂载"></a>空间挂载</h2><p>openwrt默认是/opt和/overlay共用空间，因为文件格式等问题，docker在这种情况下只能使用vfs储存模式，占用空间大且速度慢。为此，在openwrt中分别为overlay和docker的opt分别分配空间并格式化为ext4格式，然后把/overlay和/opt分别挂载在上面，这样docker就会自动使用更好更快的overlay2储存模式。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://pic.imgdb.cn/item/62481d8e27f86abb2ad15124.png"
-                     
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481d8e27f86abb2ad15124.png"></p>
 <p>另外，我还将一块移动硬盘挂载在/mnt/share，而且将它通过<code>Samba</code>进行网络共享，共享下局域网传文件速度还是很可观的。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://pic.imgdb.cn/item/62481da727f86abb2ad18298.png"
-                     
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481da727f86abb2ad18298.png"></p>
 <h2 id="Homeassistant"><a href="#Homeassistant" class="headerlink" title="Homeassistant"></a>Homeassistant</h2><p>首先是使用docker在openwrt中安装<code>Homeassistant</code>，这样就可以本地搭建智能家居服务器。<code>Homeassistant</code>使用<code>MQTT</code>协议的通信服务，所以还搭建了一个基于<code>MQTT</code>的开源服务器<code>Eclipse Mosquitto</code>的docker。</p>
 <ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://www.home-assistant.io/" >Homeassistant<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MQTT" >MQTT<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://mosquitto.org/" >Eclipse Mosquitto<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://www.home-assistant.io/">Homeassistant<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MQTT">MQTT<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://mosquitto.org/">Eclipse Mosquitto<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
 <h3 id="MQTT"><a href="#MQTT" class="headerlink" title="MQTT"></a>MQTT</h3><p>首先设置配置文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/config</span><br><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/data</span><br><span class="line"><span class="built_in">mkdir</span> -p /mosquitto/log</span><br><span class="line">nano /mosquitto/config/mosquitto.conf</span><br></pre></td></tr></table></figure>
@@ -273,17 +246,12 @@
 <p>然后运行nginx</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=<span class="string">&quot;web-nginx&quot;</span> -p 8088:80 \</span><br><span class="line">    -v /root/nginx/conf.d:/etc/nginx/conf.d</span><br><span class="line">    -v /root/nginx/webroot:/usr/share/nginx/html</span><br><span class="line">    nginx:latest</span><br></pre></td></tr></table></figure>
 <p>有个问题是，8080端口不能正常使用，建议使用自定义端口，譬如我用的8088端口。</p>
-<h3 id="Speedtest"><a href="#Speedtest" class="headerlink" title="Speedtest"></a>Speedtest</h3><p>成功运行后，在文件目录，我的是/root/nginx/webroot，添加Speedtest的网站文件。并将example-singleServer-full.html重命名为默认文件index.html。然后就可以直接访问对应的网址测速了，我的是<a class="link"   target="_blank" rel="noopener" href="http://192.168.2.110:8088/speedtest/" >192.168.2.110:8088/speedtest/<i class="fas fa-external-link-alt"></i></a>。</p>
+<h3 id="Speedtest"><a href="#Speedtest" class="headerlink" title="Speedtest"></a>Speedtest</h3><p>成功运行后，在文件目录，我的是/root/nginx/webroot，添加Speedtest的网站文件。并将example-singleServer-full.html重命名为默认文件index.html。然后就可以直接访问对应的网址测速了，我的是<a class="link" target="_blank" rel="noopener" href="http://192.168.2.110:8088/speedtest/">192.168.2.110:8088/speedtest/<i class="fas fa-external-link-alt"></i></a>。</p>
 <ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/librespeed/speedtest" >Speedtest<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://github.com/librespeed/speedtest">Speedtest<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
 <p>当当当当，最终的测速效果如下</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://pic.imgdb.cn/item/62481dc027f86abb2ad1b2ef.png"
-                     
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://pic.imgdb.cn/item/62481dc027f86abb2ad1b2ef.png"></p>
 
         </div>
 
@@ -311,10 +279,7 @@
             <div class="article-nav">
                 
                     <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/08/homeassistant/"
-                        >
+                        <a class="prev" rel="prev" href="/2021/08/homeassistant/">
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
@@ -327,10 +292,7 @@
                 
                 
                     <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2021/08/openwrt_init/"
-                        >
+                        <a class="next" rel="next" href="/2021/08/openwrt_init/">
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">Openwrt搭建</span>
                                 <span class="post-nav-item">下一篇</span>
@@ -358,23 +320,23 @@
             <footer class="footer">
     <div class="info-container">
                 <div class="github-badge">
-            <a style="color: #fff" rel="license noopener" href="https://hexo.io" target="_blank">
+            <a style="color:#fff" rel="license noopener" href="//hexo.io" target="_blank">
             <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
         </div>
         <div class="github-badge">
-            <a style="color: #fff" rel="license noopener" href="https://github.com/XPoet/hexo-theme-keep" target="_blank">
+            <a style="color:#fff" rel="license noopener" href="//github.com/XPoet/hexo-theme-keep" target="_blank">
             <span class="badge-subject">Theme</span><span class="badge-value bg-red">Keep</span></a>
         </div>
         <div class="github-badge">
-            <a style="color: #fff" rel="license noopener" href="https://www.jsdelivr.com/" target="_blank">
+            <a style="color:#fff" rel="license noopener" href="//www.jsdelivr.com/" target="_blank">
             <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">&nbspjsDelivr</span></a>
         </div>
         <div class="github-badge">
-            <a style="color: #fff" rel="license noopener" href="https://busuanzi.ibruce.info" target="_blank">
+            <a style="color:#fff" rel="license noopener" href="http://busuanzi.ibruce.info" target="_blank">
             <span class="badge-subject" id="busuanzi_container_site_pv">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank">&nbsp</span></a>
         </div>
         <div class="github-badge">
-            <a style="color: #fff" rel="license noopener" href="https://blog.liulp.club" target="_blank">
+            <a style="color:#fff" rel="license noopener" href="//blog.liulp.club" target="_blank">
             <span class="badge-subject">Survived</span><span class="badge-value bg-blueviolet" id="spantime">&nbsp</span></a>
         </div>
 
@@ -389,30 +351,12 @@
                 &nbsp;<i class="fas fa-coffee"></i>&nbsp;<a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">浙ICP备20029940号</a>
             
         </div>
-        <!-- 
-            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-         -->
-        <!-- <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div> -->
-        <!-- 
-            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">浙ICP备20029940号</a></div>
-         -->
-        <!--  -->
+        
+        
+        
+        
 
-        <!-- <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+        
     </div>
 </footer>
 
@@ -423,14 +367,14 @@
         <div class="post-tools">
             <div class="post-tools-container">
     <ul class="tools-list">
-        <!-- TOC aside toggle -->
+        
         
             <li class="tools-item page-aside-toggle">
                 <i class="fas fa-outdent"></i>
             </li>
         
 
-        <!-- go comment -->
+        
         
     </ul>
 </div>
@@ -457,13 +401,10 @@
             <i class="fas fa-moon"></i>
         </li>
 
-        <!-- rss -->
+        
         
             <li class="tools-item rss flex-center">
-                <a class="flex-center"
-                   href="/atom.xml"
-                   target="_blank"
-                >
+                <a class="flex-center" href="/atom.xml" target="_blank">
                     <i class="fas fa-rss"></i>
                 </a>
             </li>
@@ -514,14 +455,7 @@
             <i class="fas fa-keyboard"></i>
           </span>
             <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="搜索..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
             </div>
             <span class="popup-btn-close">
                 <i class="fas fa-times"></i>
